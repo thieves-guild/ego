@@ -1,6 +1,11 @@
+import Rate from "../components/rate"
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <h1>My daily rate</h1>
+      <Rate />
+    </>
   )
 }
 
