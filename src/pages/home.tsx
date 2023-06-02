@@ -1,6 +1,11 @@
+import CircularBar from "../components/circularProgressBar"
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <h1>My daily rate</h1>
+      <CircularBar />
+    </>
   )
 }
 
