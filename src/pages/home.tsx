@@ -1,4 +1,4 @@
-import CircularBar from "../components/circularProgressBar"
+import CircularBar from "../components/circular-progress-bar"
 
 const Home = () => {
   return (

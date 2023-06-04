@@ -1,0 +1,9 @@
+export const DARK_RED = '#450a0a' // 0 - 11
+export const RED = '#7f1d1d' // 12 - 23
+export const DARK_ORANGE = '#9a3412' // 24 - 35
+export const ORANGE = '#b45309' // 36 - 47
+export const DARK_YELLOW = '#ca8a04' // 48 - 59
+export const YELLOW = '#eab308' // 60 - 71
+export const LIGHT_GREEN = '#84cc16' // 72 - 83
+export const GREEN = '#4d7c0f' // 84 - 95
+export const DARK_GREEN = '#365314' // 96 - 100
