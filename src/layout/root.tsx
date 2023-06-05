@@ -1,12 +1,16 @@
 import Header from './header'
 import Footer from './footer'
 import { Outlet } from 'react-router-dom'
+import Sidebar from './sidebar'
 
 const Root = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className='flex'>
+        <Sidebar />
+        <Outlet />
+      </div>
       <Footer />
     </>
   )
