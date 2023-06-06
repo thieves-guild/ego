@@ -1,4 +1,12 @@
-import { RED, DARK_GREEN, DARK_ORANGE, GREEN, DARK_RED, DARK_YELLOW, YELLOW, LIGHT_GREEN, ORANGE } from '../utils/colors';
+import { RED, 
+  DARK_GREEN, 
+  DARK_ORANGE, 
+  GREEN, 
+  DARK_RED, 
+  DARK_YELLOW, 
+  YELLOW, LIGHT_GREEN, 
+  ORANGE 
+} from '../utils/colors';
 
 export const calculateColor = (x: number): string => {
   if (x <= 15) return DARK_RED
