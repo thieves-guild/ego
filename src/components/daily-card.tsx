@@ -1,9 +1,9 @@
 import { useState } from "react"
 
-type DailyCard = 'undefined' | 'accomplished' | 'failed'
+type DailyResult = 'undefined' | 'accomplished' | 'failed'
 
 const DailyCard = () => {
-  const [state, setState] = useState<DailyCard>('undefined')
+  const [state, setState] = useState<DailyResult>('undefined')
   return (
     <div>
 

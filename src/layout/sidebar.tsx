@@ -10,7 +10,8 @@ const Sidebar = () => {
         <>
           <button onClick={() => setOpen(!open)}>Open</button>
           <NavLink to='/'>Home</NavLink>
-          <NavLink to='elements'>Elements</NavLink>
+          <NavLink to='/elements'>Elements</NavLink>
+          <NavLink to='/streaks'>Streaks</NavLink>
         </>
       ) :
         (
