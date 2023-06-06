@@ -8,6 +8,10 @@ import Root from "./layout/root";
 import Home from "./pages/home";
 import Elements from "./pages/elements";
 import Streaks from "./pages/streaks";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { queryClient } from "./query-client";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 const App = () => {
   const router = createBrowserRouter(createRoutesFromChildren(
@@ -19,7 +23,12 @@ const App = () => {
   ))
 
   return (
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </Provider>
+
   )
 }
 
