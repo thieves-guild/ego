@@ -1,7 +1,6 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { calculateColor } from '../functions';
-import RandomQuote from './random-quote';
 
 const CircularBar = () => {
   const x = 96 //This variable is going to be some external number that we get after making the factor calculation
@@ -20,7 +19,6 @@ const CircularBar = () => {
           pathColor: color,
           textColor: color,
         })} />
-      <RandomQuote />
     </>
 
   )
