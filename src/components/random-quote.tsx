@@ -6,7 +6,7 @@ const RandomQuote = () => {
     queryKey: ['quote'],
     queryFn: async (): Promise<Quote> =>
       await (
-        await fetch('$ npm i @tanstack/react-query'
+        await fetch('https://stoic-quotes.com/api/quote'
         )
       ).json()
   })
