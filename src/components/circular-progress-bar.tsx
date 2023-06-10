@@ -3,7 +3,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { calculateColor } from '../functions';
 
 const CircularBar = () => {
-  const x = 96 //This variable is going to be some external number that we get after making the factor calculation
+  const x = 100 //This variable is going to be some external number that we get after making the factor calculation
   const color = calculateColor(x)
 
   return (

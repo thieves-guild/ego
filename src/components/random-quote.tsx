@@ -17,8 +17,8 @@ const RandomQuote = () => {
 
   return (
     <div>
-      <p>{data?.text}</p>
-      <p>{data?.author}</p>
+      <p className='text-neutral-700 italic mb-2'>"{data?.text}"</p>
+      <p>- {data?.author}</p>
     </div>
   )
 }

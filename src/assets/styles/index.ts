@@ -1,0 +1,1 @@
+export const sidebar = 'bg-neutral-800 duration-200 text-white text-left'

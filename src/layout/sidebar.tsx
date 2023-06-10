@@ -1,22 +1,12 @@
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
+import { sidebar } from "../assets/styles"
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false)
-
   return (
-    <div className='border-black border flex flex-col'>
-      {open ? (
-        <>
-          <button onClick={() => setOpen(!open)}>Open</button>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/elements'>Elements</NavLink>
-          <NavLink to='/streaks'>Streaks</NavLink>
-        </>
-      ) :
-        (
-          <button onClick={() => setOpen(!open)}>Open</button>
-        )}
+    <div className={open ? `w-44 ${sidebar}` : `w-16 ${sidebar}`}>
+      <button className="p-2" onClick={() => setOpen(!open)}>Open</button>
     </div>
   )
 }
