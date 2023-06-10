@@ -5,7 +5,7 @@ const Sidebar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className='border-black border flex flex-col'>
+    <div className='border-black border flex flex-col h-screen p-2 duration-200'>
       {open ? (
         <>
           <button onClick={() => setOpen(!open)}>Open</button>
