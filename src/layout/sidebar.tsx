@@ -5,14 +5,14 @@ const Sidebar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className='border-black border flex flex-col h-screen p-2 duration-200'>
+    <div className="bg-neutral-800 text-white">
       {open ? (
-        <>
+        <div>
           <button onClick={() => setOpen(!open)}>Open</button>
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/elements'>Elements</NavLink>
           <NavLink to='/streaks'>Streaks</NavLink>
-        </>
+        </div>
       ) :
         (
           <button onClick={() => setOpen(!open)}>Open</button>

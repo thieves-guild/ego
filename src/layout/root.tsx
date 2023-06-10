@@ -4,13 +4,13 @@ import Sidebar from './sidebar'
 
 const Root = () => {
   return (
-    <>
-      <div className='flex'>
-        <Sidebar />
+    <div className='flex'>
+      <Sidebar />
+      <div className='w-full'>
         <Outlet />
+        <Footer />
       </div>
-      <Footer />
-    </>
+    </div>
   )
 }
 
