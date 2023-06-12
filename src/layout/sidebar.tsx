@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { NavLink } from "react-router-dom"
 import { sidebar } from "../assets/styles"
 
 const Sidebar = () => {

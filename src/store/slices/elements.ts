@@ -19,3 +19,6 @@ export const elementSlice = createSlice({
     }
   }
 })
+
+export const {addElement, removeElement, editElement} = elementSlice.actions
+export const elementReducer = elementSlice.reducer
