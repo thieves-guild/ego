@@ -2,7 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const elementSlice = createSlice({
   name: 'element',
-  initialState: [{}],
+  initialState: [{
+    title: '',
+    description: '',
+    percentage: ''
+  }],
   reducers: {
     addElement: (state, action) => {
       return [...state, {
@@ -19,3 +23,6 @@ export const elementSlice = createSlice({
     }
   }
 })
+
+export const {addElement, removeElement, editElement} = elementSlice.actions
+export const elementReducer = elementSlice.reducer

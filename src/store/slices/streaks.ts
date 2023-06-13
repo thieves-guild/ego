@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const elementSlice = createSlice({
-  name: 'element',
+export const streakSlice = createSlice({
+  name: 'streak',
   initialState: [{}],
   reducers: {
     createStreak: (state, action) => {
@@ -19,3 +19,6 @@ export const elementSlice = createSlice({
     }
   }
 })
+
+export const {createStreak, removeStreak, editStreak} = streakSlice.actions
+export const streakReducer = streakSlice.reducer
