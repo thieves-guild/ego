@@ -1,12 +1,14 @@
 import { useState } from "react"
-import { sidebar } from "../assets/styles"
+import { NavLink } from "react-router-dom"
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className={open ? `w-44 ${sidebar}` : `w-16 ${sidebar}`}>
-      <button className="p-2" onClick={() => setOpen(!open)}>Open</button>
+    <div className='bg-neutral-800 duration-200 text-white text-left flex flex-col p-2'>
+      <button className="text-left" onClick={() => setOpen(!open)}>Open</button>
+      <NavLink to={'/'}>Home</NavLink>
+      <NavLink to={'/elements'}>Elements</NavLink>
     </div>
   )
 }

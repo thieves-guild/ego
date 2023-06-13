@@ -5,5 +5,6 @@ export type Quote = {
 
 export type FormData = {
   title: string;
-  description: string
+  description: string;
+  percentage: number | undefined
 }

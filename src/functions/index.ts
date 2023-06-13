@@ -19,3 +19,9 @@ export const calculateColor = (x: number): string => {
   else if (x <= 94) return GREEN
   else return DARK_GREEN
 }
+
+export const firstLetterToUpperCase = (title: string) => {
+  const firstLetter = title.charAt(0);
+  const restOfTitle = title.slice(1);
+  return firstLetter.toUpperCase() + restOfTitle;
+}
