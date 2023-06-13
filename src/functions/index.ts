@@ -19,3 +19,9 @@ export const calculateColor = (x: number): string => {
   else if (x <= 94) return GREEN
   else return DARK_GREEN
 }
+
+export const firstLetterToUpperCase = (title: string) => {
+  const splitted = title.split('')
+  console.log(splitted);
+  return splitted
+}

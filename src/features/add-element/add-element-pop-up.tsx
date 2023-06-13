@@ -4,14 +4,15 @@ import { addElement } from '../../store/slices/elements'
 import { FormData } from '../../types'
 
 const AddElementPopUp = () => {
-  const { register,
+  const {
+    register,
     handleSubmit,
     reset,
-    formState: { errors }
   } = useForm({
     defaultValues: {
       title: '',
-      description: ''
+      description: '',
+      percentage: undefined
     }
   })
   const dispatch = useDispatch()
@@ -21,14 +22,21 @@ const AddElementPopUp = () => {
   }
 
   return (
-    <form className='flex flex-col p-12 w-fit border-black border' onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="idle">Title</label>
-      <input className='bg-neutral-200 rounded p-1 mb-2' {...register('title', { required: true })} id='title' type="text" />
-      <label htmlFor="description">Description</label>
-      <input className='bg-neutral-200 rounded p-1' {...register('description', { required: true })} id='description' type="text" />
-      <button className='mt-4 bg-green-600 hover:bg-green-800 duration-200 text-white rounded p-2' type='submit'>Create Element</button>
+    <form className='p-12 w-fit border-black border space-y-4' onSubmit={handleSubmit(onSubmit)}>
+      <div className='flex flex-col'>
+        <label htmlFor="idle">Title</label>
+        <input className='bg-neutral-200 rounded p-1 mb-2' {...register('title', { required: true })} id='title' type="text" />
+        <label htmlFor="description">Description</label>
+        <input className='bg-neutral-200 rounded p-1' {...register('description', { required: true })} id='description' type="text" />
+        <label htmlFor="percentage">Percentage</label>
+        <input max={100} min={1} className='bg-neutral-200 rounded p-1' {...register('percentage', { required: true })} id='description' type='number' />
+      </div>
+      <div className='flex flex-col space-y-2'>
+        <button className='bg-green-600 hover:bg-green-700 duration-200 text-white rounded p-2' type='submit'>Create Element</button>
+        <button className='bg-red-600 hover:bg-red-700 duration-200 text-white rounded p-2'>Cancel</button>
+      </div>
     </form>
   )
 }
 
-export default AddElementPopUp
+export default AddElementPopUp;
