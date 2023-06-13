@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@tanstack/react-query": "^4.29.12",
+    "lucide-react": "^0.244.0",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
