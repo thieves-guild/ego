@@ -9,15 +9,17 @@ const Elements = () => {
   return (
     <div>
       <AddElementPopUp />
-      {elements.slice(1).map(element => {
-        return (
-          <div className="w-40 h-40 border border-black p-4 rounded">
-            <h1 className="text-2xl">{firstLetterToUpperCase(element.title)}</h1>
-            <p>{element.description}</p>
-            <p>Percentage: {element.percentage}</p>
-          </div>
-        )
-      })}
+      <div className="p-20 grid grid-cols-4 gap-8">
+        {elements.slice(1).map(({ title, description, percentage }) => {
+          return (
+            <div className="border border-black p-4 rounded">
+              <h1 className="text-2xl">{firstLetterToUpperCase(title)}</h1>
+              <p className="text-neutral-700">{description}</p>
+              <p>Percentage: <span className="font-bold">{percentage}%</span></p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

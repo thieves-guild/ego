@@ -21,7 +21,7 @@ export const calculateColor = (x: number): string => {
 }
 
 export const firstLetterToUpperCase = (title: string) => {
-  const splitted = title.split('')
-  console.log(splitted);
-  return splitted
+  const firstLetter = title.charAt(0);
+  const restOfTitle = title.slice(1);
+  return firstLetter.toUpperCase() + restOfTitle;
 }
