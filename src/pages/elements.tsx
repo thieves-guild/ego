@@ -3,6 +3,7 @@ import { RootState } from "../store"
 import AddElementPopUp from "../features/add-element/add-element-pop-up"
 import { firstLetterToUpperCase } from "../functions"
 import { MoreVertical } from "lucide-react"
+import CodePerformance from "../components/code-performance"
 
 const Elements = () => {
   const elements = useSelector((state: RootState) => state.element)
@@ -11,6 +12,7 @@ const Elements = () => {
     <>
       <AddElementPopUp />
       <h1 className="text-5xl text-center">Your Elements</h1>
+      <CodePerformance />
       <div className="p-20 grid grid-cols-4 gap-8">
         {elements.slice(1).map(({ title, description, percentage }) => {
           return (
