@@ -8,10 +8,15 @@ type Props = {
 
 const MenuLink: React.FC<Props> = ({ name, to }) => {
   return (
-    <NavLink to={to}>
-      <p className="hover:bg-slate-500 cursor-pointer p-2 w-full transition duration-200 rounded">
-        {name}
-      </p>
+    <NavLink
+      className={({ isActive }) =>
+        isActive
+          ? "cursor-pointer p-2 w-full transition duration-200 rounded bg-slate-500"
+          : "cursor-pointer p-2 w-full transition duration-200 rounded hover:bg-slate-500"
+      }
+      to={to}
+    >
+      {name}
     </NavLink>
   );
 };
