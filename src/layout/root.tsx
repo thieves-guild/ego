@@ -4,9 +4,9 @@ import Sidebar from './sidebar'
 
 const Root = () => {
   return (
-    <div className='flex'>
+    <div className='min-h-screen flex'>
       <Sidebar />
-      <div className='w-full'>
+      <div className=''>
         <Outlet />
         <Footer />
       </div>
