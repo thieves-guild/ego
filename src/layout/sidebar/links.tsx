@@ -1,8 +1,8 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 
 type Props = {
-  name: string;
+  name: string | ReactNode;
   to: string;
 };
 
