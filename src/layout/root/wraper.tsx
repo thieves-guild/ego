@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Wraper: React.FC<Props> = ({ children }) => {
-  return <div className="p-12">{children}</div>;
+  return <div className="p-12 border-2">{children}</div>;
 };
 
 export default Wraper;

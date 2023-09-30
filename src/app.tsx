@@ -10,32 +10,47 @@ import { queryClient } from "./query-client";
 import Dashboard from "./pages/dashboard";
 import Elements from "./pages/elements";
 import Streak from "./pages/streak";
-import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-react";
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+  SignIn,
+  SignInButton,
+} from "@clerk/clerk-react";
 import Home from "./pages/home";
+import SignInPage from "./pages/signIn";
 
 const App = () => {
-  const router = createBrowserRouter(
-    createRoutesFromChildren(
-      <Route path="/" element={<Root />}>
-        <Route path="/home" element={<Home />} />
-        <Route
-          index
-          element={
-            <SignedIn>
-              <Dashboard />
-            </SignedIn>
-          }
-        />
-        <Route path="/elements" element={<Elements />} />
-        <Route path="/streak" element={<Streak />} />
-      </Route>
-    )
-  );
-
-  if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
+  if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
     throw new Error("Missing Publishable Key");
   }
-  const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+
+  const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+  const router = createBrowserRouter(
+    createRoutesFromChildren(
+      <>
+        <Route path="/sign-in" element={<SignInPage />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <SignedIn>
+                <Root />
+              </SignedIn>
+              <SignedOut>
+                <RedirectToSignIn redirectUrl="/sign-in" />
+              </SignedOut>
+            </>
+          }
+        >
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/elements" element={<Elements />} />
+          <Route path="/streak" element={<Streak />} />
+        </Route>
+      </>
+    )
+  );
 
   return (
     <ClerkProvider publishableKey={clerkPubKey}>

@@ -1,5 +1,12 @@
+import { RedirectToSignIn, SignOutButton } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
+
 const Elements = () => {
-  return <div>Elements</div>;
+  return (
+    <div>
+      <SignOutButton />
+    </div>
+  );
 };
 
 export default Elements;
