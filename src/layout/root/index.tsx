@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./sidebar";
+import Sidebar from "../sidebar";
+import Wraper from "./wraper";
 
 const Root = () => {
   return (
     <div className="min-h-screen flex">
       <Sidebar />
-      <div className="">
-        <Outlet />
+      <div>
+        <Wraper>
+          <Outlet />
+        </Wraper>
       </div>
     </div>
   );

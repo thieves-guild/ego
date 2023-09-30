@@ -1,1 +1,0 @@
-export const footerOnHover = 'hover:text-neutral-900 duration-200'
