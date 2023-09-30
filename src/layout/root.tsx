@@ -1,17 +1,15 @@
-import Footer from './footer'
-import { Outlet } from 'react-router-dom'
-import Sidebar from './sidebar'
+import { Outlet } from "react-router-dom";
+import Sidebar from "./sidebar";
 
 const Root = () => {
   return (
-    <div className='min-h-screen flex'>
+    <div className="min-h-screen flex">
       <Sidebar />
-      <div className=''>
+      <div className="">
         <Outlet />
-        <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Root
+export default Root;
