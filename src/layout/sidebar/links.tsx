@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 type Props = {
-  name: string | ReactNode;
+  name: string;
   to: string;
 };
 
@@ -11,8 +11,8 @@ const MenuLink: React.FC<Props> = ({ name, to }) => {
     <NavLink
       className={({ isActive }) =>
         isActive
-          ? "cursor-pointer p-2 w-full transition duration-200 rounded bg-slate-500"
-          : "cursor-pointer p-2 w-full transition duration-200 rounded hover:bg-slate-500"
+          ? "cursor-pointer p-2 w-full rounded bg-neutral-300"
+          : "cursor-pointer p-2 w-full rounded hover:bg-neutral-300 duration-100 "
       }
       to={to}
     >
