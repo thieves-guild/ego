@@ -4,9 +4,9 @@ import Wraper from "./wraper";
 
 const Root = () => {
   return (
-    <div className="min-h-screen flex">
+    <div className="flex min-h-screen">
       <Sidebar />
-      <div>
+      <div className="w-full">
         <Wraper>
           <Outlet />
         </Wraper>
