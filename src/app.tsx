@@ -15,10 +15,7 @@ import {
   RedirectToSignIn,
   SignedIn,
   SignedOut,
-  SignIn,
-  SignInButton,
 } from "@clerk/clerk-react";
-import Home from "./pages/home";
 import SignInPage from "./pages/signIn";
 
 const App = () => {
@@ -30,24 +27,26 @@ const App = () => {
   const router = createBrowserRouter(
     createRoutesFromChildren(
       <>
-        <Route path="/sign-in" element={<SignInPage />} />
         <Route
           path="/"
           element={
-            <>
-              <SignedIn>
-                <Root />
-              </SignedIn>
-              <SignedOut>
-                <RedirectToSignIn redirectUrl="/sign-in" />
-              </SignedOut>
-            </>
+            <SignedIn>
+              <Root />
+            </SignedIn>
           }
         >
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route index element={<Dashboard />} />
           <Route path="/elements" element={<Elements />} />
           <Route path="/streak" element={<Streak />} />
         </Route>
+        <Route
+          path="/sign-in"
+          element={
+            <SignedOut>
+              <SignInPage />
+            </SignedOut>
+          }
+        />
       </>
     )
   );
