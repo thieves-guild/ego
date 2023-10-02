@@ -10,12 +10,7 @@ import { queryClient } from "./query-client";
 import Dashboard from "./pages/dashboard";
 import Elements from "./pages/elements";
 import Streak from "./pages/streak";
-import {
-  ClerkProvider,
-  RedirectToSignIn,
-  SignedIn,
-  SignedOut,
-} from "@clerk/clerk-react";
+import { ClerkProvider, SignedIn, SignedOut } from "@clerk/clerk-react";
 import SignInPage from "./pages/signIn";
 
 const App = () => {
