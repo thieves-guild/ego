@@ -22,6 +22,7 @@ const App = () => {
   const router = createBrowserRouter(
     createRoutesFromChildren(
       <>
+        <Route path="/" element={<SignInPage />} />
         <Route
           path="/"
           element={
@@ -30,7 +31,7 @@ const App = () => {
             </SignedIn>
           }
         >
-          <Route index element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/elements" element={<Elements />} />
           <Route path="/streak" element={<Streak />} />
         </Route>

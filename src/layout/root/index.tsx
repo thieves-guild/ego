@@ -4,12 +4,14 @@ import Wraper from "./wraper";
 
 const Root = () => {
   return (
-    <div className="flex min-h-screen">
-      <Sidebar />
-      <div className="w-full">
-        <Wraper>
-          <Outlet />
-        </Wraper>
+    <div className="bg-neutral-300">
+      <div className="drop-shadow-xl flex min-h-screen mx-auto max-w-7xl container">
+        <Sidebar />
+        <div className="w-full bg-white">
+          <Wraper>
+            <Outlet />
+          </Wraper>
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const UserInfo = () => {
       onClick={() => {}}
       className="flex items-center gap-4 p-2 my-4 bg-neutral-200 cursor-pointer"
     >
-      <UserButton />
+      <UserButton afterSignOutUrl="/" />
       <h1>{user?.fullName}</h1>
     </div>
   );
