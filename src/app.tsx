@@ -11,8 +11,9 @@ import Dashboard from "./pages/dashboard";
 import Elements from "./pages/elements";
 import Streak from "./pages/streak";
 import { useAuth } from "@clerk/clerk-react";
-import SignInPage from "./pages/signIn";
+import SignInPage from "./pages/sign-in";
 import Error from "./pages/error";
+import SignUpPage from "./pages/sign-up";
 
 const App = () => {
   const { isSignedIn } = useAuth();
@@ -28,7 +29,7 @@ const App = () => {
       ) : (
         <Route path={"/"}>
           <Route index element={<SignInPage />} />
-          <Route path="sign-up" element={<SignInPage />} />
+          <Route path="sign-up" element={<SignUpPage />} />
         </Route>
       )
     )
